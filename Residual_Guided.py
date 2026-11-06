@@ -274,7 +274,7 @@ class ResidualGuidedZeroShotDIP:
                 return h_tv + w_tv
 
             residual_gate = torch.ones_like(z0, device=device)
-            gate_alpha = 0.1
+            gate_alpha = 0.05
             min_gate = 0.05
             xi_scale = z0.abs().amax().detach() / 2.0
 
