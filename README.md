@@ -64,7 +64,7 @@ Each `.npz` file corresponds to **one 2D multi-coil slice/case** used for evalua
 
 - Datasets: **fastMRI Knee**, **Brain(T1)**, and **Brain(T2)**
 - Acceleration factors: **x4** and **x8**
-- Sampling pattern: **uniform Cartesian**
+- Sampling pattern: **random masks**
 - Coil sensitivity maps are treated as **fixed inputs**
 - For each subset, **15 cases were randomly selected once and then kept fixed**
 - All compared scan-specific methods use the **same case list**
@@ -173,7 +173,7 @@ The current implementation uses the following defaults in the MRI-multi pipeline
 - optimizer: `Adam`
 - learning rate: `1e-4`
 - TV weight: `1e-3`
-- gate EMA factor: `0.1`
+- gate EMA factor: `0.05`
 - minimum gate value: `0.05`
 - perturbation scale: `0.5 * max(|z0|)`
 
